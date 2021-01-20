@@ -5,6 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 import static utilities.Driver.getDriver;
@@ -17,8 +18,8 @@ public class Hooks {
 
     @Before
     public void setup() throws InterruptedException {
-        //String url = ConfigurationReader.getProperty("url");
-        //getDriver().get(url);//to open login page
+        String url = ConfigurationReader.getProperty("url");
+        getDriver().get(url);//to open login page
 
     }
 
